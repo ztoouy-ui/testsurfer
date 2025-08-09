@@ -56,7 +56,7 @@ async function getSurfData() {
     const { lat, lon } = spots[spot];
 
     // Open-Meteo API (풍속, 파고, 파 주기)
-    const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wind_speed,wind_direction&timezone=auto`;
+    const url = `https://www.wsbfarm.com/wavecam/WaveChartView?beach=GNH2latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wind_speed,wind_direction&timezone=auto`;
     const res = await fetch(url);
     const data = await res.json();
 
