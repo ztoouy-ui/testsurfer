@@ -54,7 +54,7 @@ async function getSurfData() {
     const { lat, lon } = spots[spot];
 
     // Open-Meteo API (풍속, 파고, 파 주기)
-    const url = `https://www.wsbfarm.com/wavecam/WaveChartView?beach=GNH2`;
+    const url = `[https://www.wsbfarm.com/wavecam/WaveChartView?beach=GNH](https://www.weather.go.kr/w/ocean/prediction/nwp.do)2`;
     const res = await fetch(url);
     const data = await res.json();
 
