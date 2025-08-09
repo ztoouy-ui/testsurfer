@@ -23,7 +23,6 @@
     <label>서핑 스팟</label>
     <select id="spot">
         <option value="namyeol">남열</option>
-        <option value="yangyang">양양</option>
         <option value="busan">부산 송정</option>
     </select>
 
@@ -46,7 +45,6 @@ const boards = [
 // 스팟 좌표
 const spots = {
     namyeol: { lat: 34.605, lon: 127.287 },
-    yangyang: { lat: 38.073, lon: 128.626 },
     busan: { lat: 35.179, lon: 129.199 }
 };
 
@@ -56,7 +54,7 @@ async function getSurfData() {
     const { lat, lon } = spots[spot];
 
     // Open-Meteo API (풍속, 파고, 파 주기)
-    const url = `https://www.wsbfarm.com/wavecam/WaveChartView?beach=GNH2latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wind_speed,wind_direction&timezone=auto`;
+    const url = `https://www.wsbfarm.com/wavecam/WaveChartView?beach=GNH2`;
     const res = await fetch(url);
     const data = await res.json();
 
